@@ -1,0 +1,238 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+button,
+button:focus,
+button:active {
+	border: none;
+	background-color: #ffffff;
+    cursor: pointer;
+	outline: none;
+}
+
+body {
+	line-height: 1;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 16px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+nav {
+	display: flex;
+	padding: 2rem 1rem;
+	justify-content: space-between;
+	margin-bottom: -0.7rem;
+}
+
+#logo {
+	max-height: 1.3rem;
+	margin-left: 0.7rem;
+}
+
+.nav-left,
+.nav-right {
+	display: inline-flex;
+}
+
+#menu,
+#cart {
+	max-height: 1.3rem;
+	min-width: 1.3rem;
+	color: #69707D;
+}
+
+#avatar {
+	max-height: 1.5rem;
+	margin-left: 1rem;
+	padding-right: 1rem;
+}
+
+#sneakers {
+	max-width: 100%;
+	z-index: 1;
+}
+
+.product {
+	max-width: 100%;
+	position: relative;
+}
+
+#next {
+	margin-left: 19.8rem;
+	border-radius: 100%;
+	padding: 1rem;
+	position: absolute;
+	margin-top: 10rem;
+	z-index: 2;
+}
+
+#prev {
+	border-radius: 100%;
+	padding: 1rem;
+	position: absolute;
+	margin-left: 1rem;
+	margin-top: 10rem;
+	z-index: 2;
+}
+
+.text {
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.text h3 {
+	color: hsl(26, 100%, 55%);
+	font-weight: 700;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+}
+
+.text h2 {
+	font-weight: 700;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.text p {
+	color: gray;
+	line-height: 1.6rem;
+}
+
+.price-container {
+	display: inline-flex;
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+
+#price {
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+#discount {
+	color: hsl(26, 100%, 55%);
+	font-weight: 700;
+	font-size: 0.9rem;
+	margin-right: 9rem;
+	background-color: hsl(25, 100%, 94%);
+	padding: 0.2rem 0.3rem; 
+}
+
+#full-price {
+	color: lightgray;
+	font-weight: 400;
+	text-decoration: line-through;
+}
+
+.add-to-cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 2rem ;
+	background-color: hsl(223, 64%, 98%);
+	padding: 1rem 1rem;
+	font-weight: 700;
+}
+
+.cart-container {
+	display: flex;
+	justify-content: center;
+}
+
+.cart {
+	background-color: hsl(26, 100%, 55%);
+	width: 19.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	color: white;
+	font-weight: 700;
+}
+
+.cart img {
+	margin-right: 1rem;
+}
+ 
+.menu-container {
+	height: 100%;
+	width: 60%;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+
+.menu-container a,
+.menu-container #x {
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+	position: absolute;
+	display: flex;
+	line-height: 3rem;
+	z-index: 99;
+	position: static;
+	background-color: white;
+	margin-left: 1rem;
+}
+
+#gray {
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.inactive {
+	display: none;
+}
+
+#x {
+	margin-bottom: 3rem;
+	margin-top: 2rem !important;
+}
