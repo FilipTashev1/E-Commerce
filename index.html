@@ -20,11 +20,11 @@
     <div id="gray" class="inactive"></div>
     <nav>
       <div class="nav-left">
-        <button onclick="openMenu()">
+        <button onclick="toggleMenu()">
             <img src="./images/icon-menu.svg" alt="colapsible menu" id="menu">
         </button>
         <div class="menu-container inactive" id="menu-button">
-          <button id="x" onclick="closeMenu()"><img src="./images/icon-close.svg" alt="close"></button>
+          <button id="x" onclick="toggleMenu()"><img src="./images/icon-close.svg" alt="close"></button>
           <a href="#collections">Collections</a>
           <a href="#men">Men</a>
           <a href="#women">Women</a>
@@ -34,8 +34,8 @@
         <img src="./images/logo.svg" alt="logo" id="logo">
       </div>
       <div class="nav-right">
-        <button>
-          <img src="./images/icon-cart.svg" alt="shopping cart" id="cart">
+        <button onclick="toggleCart()">
+          <img src="./images/icon-cart.svg" alt="shopping cart" id="cart-icon">
         </button>
         <button>
           <img src="./images/image-avatar.png" alt="avatar" id="avatar">
@@ -44,9 +44,17 @@
     </nav>
     <main>
       <div class="product">
+          <div id="cart">
+            <div id="cart-text-border">
+              <p id="cart-text">Cart</p>
+            </div>
+            <div id="cart-state-text">
+              <p>Your cart is empty.</p>
+            </div>
+          </div>
         <button id="prev" onclick="prev()"><img src="./images/icon-previous.svg" alt="previous"></button>
-        <button id="next" onclick="next()"><img src="./images/icon-next.svg" alt="next"></button>
         <img src="./images/image-product-1.jpg" alt="sneakers" id="sneakers">
+        <button id="next" onclick="next()"><img src="./images/icon-next.svg" alt="next"></button>
       </div>
       <div class="text">
         <h3>SNEAKER COMPANY</h3>

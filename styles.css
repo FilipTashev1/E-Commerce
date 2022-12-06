@@ -85,31 +85,32 @@ nav {
 }
 
 #sneakers {
-	max-width: 100%;
-	z-index: 1;
+	width: 100%;
+	max-height: 18rem;
 }
 
 .product {
 	max-width: 100%;
+	max-height: 30rem;
 	position: relative;
 }
 
 #next {
-	margin-left: 19.8rem;
 	border-radius: 100%;
 	padding: 1rem;
 	position: absolute;
-	margin-top: 10rem;
-	z-index: 2;
+	right: 0;
+	margin-right: 1rem;
+	bottom: 45%;
 }
 
 #prev {
 	border-radius: 100%;
 	padding: 1rem;
 	position: absolute;
+	left: 0;
 	margin-left: 1rem;
-	margin-top: 10rem;
-	z-index: 2;
+	bottom: 45%;
 }
 
 .text {
@@ -235,4 +236,30 @@ nav {
 #x {
 	margin-bottom: 3rem;
 	margin-top: 2rem !important;
+}
+
+#cart {
+	z-index: 2;
+	margin: 0.8rem;
+	border-radius: 4%;
+	position: absolute;
+	min-height: 80%;
+	width: 93%;
+	background-color: white;
+}
+
+#cart-text-border {
+	border-bottom: solid 1px lightgray;
+}
+
+#cart-text {
+	margin: 1.7rem;
+	font-weight: 700;
+	color: black;
+}
+
+#cart-state-text {
+	text-align: center;
+	color: gray;
+	margin: 4rem;
 }

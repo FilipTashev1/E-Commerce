@@ -42,21 +42,24 @@ function plus() {
     }
  }
 
-function openMenu() {
+function toggleMenu() {
     menu = document.getElementById('menu-button');
     gray = document.getElementById('gray');
     if (menu.classList.contains('inactive')) {
         menu.classList.remove('inactive')
         gray.classList.remove('inactive')
-    } 
+    } else {
+        menu.classList.add('inactive')
+        gray.classList.add('inactive')   
+    }
  }
 
-function closeMenu() {
-    menu = document.getElementById('menu-button');
-    gray = document.getElementById('gray');
-    if (!menu.classList.contains('inactive')) {
-        menu.classList.add('inactive')
-        gray.classList.add('inactive')        
+function toggleCart() {
+    cartContainer = document.getElementById('cart');
+    if (!cartContainer.classList.contains('inactive')) {
+        cartContainer.classList.add('inactive')
+    } else {
+        cartContainer.classList.remove('inactive')
     }
 }
 
