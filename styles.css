@@ -391,6 +391,10 @@ nav {
   width: 1.2rem;
 }
 
+#sneaker-thumbnail {
+  display: none;
+}
+
 @media screen and (min-width: 481px) {
   body {
     font-size: 24px;
@@ -453,5 +457,143 @@ nav {
   #add-to-cart-button img {
     height: 2rem;
     margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  body {
+    overflow: hidden;
+  }
+
+  #menu,
+  .menu-container,
+  #gray,
+  #prev,
+  #next {
+    display: none;
+    max-width: 0px;
+    max-height: 0px;
+  } 
+
+  nav {
+    border-bottom: 1px solid lightgray;
+    max-height: 1rem;
+    margin-top: -1rem;
+  }
+
+  #logo {
+    margin-left: -1rem;
+    max-width: 5rem;
+    min-width: 1rem;
+    max-height: 1rem;
+    min-height: 1rem;
+  }
+
+  #collections {
+    display: flex;
+    font-size: 0.8rem;
+    margin-left: -17rem;
+  }
+
+  #collections a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .cart-cont {
+    margin-right: -3rem;
+    margin-top: 0.3rem;
+  }
+
+  #cart-icon {
+    height: 1rem;
+  }
+
+  #avatar {
+    min-height: 2rem;
+    width: 2rem;
+  }
+
+  #sneakers {
+    margin-top: 7rem;
+    margin-left: 3rem;
+    min-width: 14.5rem;
+    min-height: 20rem;
+    border-radius: 5%;
+  }
+
+  #sneaker-thumbnail {
+    position: absolute;
+    display: flex;
+    margin-top: 29rem;
+    margin-left: 2rem;
+  }
+
+  #sneaker-thumbnail img {
+    max-height: 3.5rem; 
+    max-width: 3.5rem;
+    margin-left: 1rem; 
+    border-radius: 12%;
+  }
+
+  .product {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 40% 40%;
+  }
+
+  #text-wrapper {
+    margin-top: 10rem;
+    font-size: 0.7rem;
+  }
+
+  .text {
+    line-height: 1.3rem;
+  }
+
+  .text h3 {
+    font-size: 0.7rem;
+  }
+  
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  #cart-wrapper {
+    display: flex;
+    margin-left: -1rem;
+  }
+
+  #price,
+  #discount {
+    font-size: 0.8rem;
+  }
+
+  #discount{
+    margin-top: -0.2rem;
+  } 
+
+  #full-price {
+    margin-left: -6rem;
+  }
+
+  .add-to-cart {
+    min-width: 5.5rem;
+    height: 0.1rem;
+  }
+
+  #add-to-cart-button {
+    font-size: 0.8rem;
+    width: 11rem;
+    height: 2rem;
+    margin-top: -2rem;
+  }
+
+  #add-to-cart-button img {
+    height: 1rem;
+    width: 1rem;
   }
 }
