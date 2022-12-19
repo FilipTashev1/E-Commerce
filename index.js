@@ -56,10 +56,16 @@ function toggleMenu() {
 
 function toggleCart() {
   emptyCartContainer = document.getElementById("emptyCart");
+  prev = document.getElementById("prev");
+  next = document.getElementById("next");
   if (!emptyCartContainer.classList.contains("inactive")) {
     emptyCartContainer.classList.add("inactive");
+    next.classList.remove("inactive");
+    prev.classList.remove("inactive");
   } else {
     emptyCartContainer.classList.remove("inactive");
+    next.classList.add("inactive");
+    prev.classList.add("inactive");
   }
 }
 
@@ -77,6 +83,8 @@ function addToCart() {
   item4 = document.getElementById("item4");
   cart = document.getElementById("emptyCart");
   count = document.getElementById("cart-item-ammount");
+  prev = document.getElementById("prev");
+  next = document.getElementById("next");
   if (cartImage.classList.contains("inactive") && ammount.innerHTML > 0) {
     cartImage.classList.remove("inactive");
     empty.classList.add("inactive");
@@ -86,6 +94,8 @@ function addToCart() {
     item3.classList.remove("inactive");
     item4.classList.remove("inactive");
     count.classList.remove("inactive");
+    prev.classList.add('inactive');
+    next.classList.add('inactive');
     itemPrice.innerHTML = price.innerHTML;
     buyAmmount.innerHTML = ammount.innerHTML;
     total.innerHTML = "$" + ammount.innerHTML * price.innerHTML;
@@ -110,6 +120,8 @@ function emptyCart() {
   item4 = document.getElementById("item4");
   cart = document.getElementById("emptyCart");
   count = document.getElementById("cart-item-ammount");
+  prev = document.getElementById("prev");
+  next = document.getElementById("next");
   cartImage.classList.add("inactive");
   empty.classList.remove("inactive");
   item1.classList.add("inactive");
@@ -118,6 +130,8 @@ function emptyCart() {
   item4.classList.add("inactive");
   count.classList.add("inactive");
   cart.classList.add("inactive");
+  prev.classList.remove('inactive');
+  next.classList.remove('inactive');
   document.getElementById("cart-state").style.display = "block";
   document.getElementById("cart-state").style.textAlign = "center";
 
