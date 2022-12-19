@@ -76,6 +76,7 @@ function addToCart() {
   item3 = document.getElementById("item3");
   item4 = document.getElementById("item4");
   cart = document.getElementById("emptyCart");
+  count = document.getElementById("cart-item-ammount");
   if (cartImage.classList.contains("inactive") && ammount.innerHTML > 0) {
     cartImage.classList.remove("inactive");
     empty.classList.add("inactive");
@@ -84,6 +85,7 @@ function addToCart() {
     item2.classList.remove("inactive");
     item3.classList.remove("inactive");
     item4.classList.remove("inactive");
+    count.classList.remove("inactive");
     itemPrice.innerHTML = price.innerHTML;
     buyAmmount.innerHTML = ammount.innerHTML;
     total.innerHTML = "$" + ammount.innerHTML * price.innerHTML;
@@ -92,6 +94,7 @@ function addToCart() {
     itemPrice.innerHTML = price.innerHTML;
     buyAmmount.innerHTML = ammount.innerHTML;
     total.innerHTML = "$" + ammount.innerHTML * price.innerHTML;
+    count.innerHTML = ammount.innerHTML;
   }
   ammount.innerHTML = 0;
   document.getElementById("cart-state").style.display = "grid";
@@ -105,12 +108,17 @@ function emptyCart() {
   item2 = document.getElementById("item2");
   item3 = document.getElementById("item3");
   item4 = document.getElementById("item4");
+  cart = document.getElementById("emptyCart");
+  count = document.getElementById("cart-item-ammount");
   cartImage.classList.add("inactive");
   empty.classList.remove("inactive");
   item1.classList.add("inactive");
   item2.classList.add("inactive");
   item3.classList.add("inactive");
   item4.classList.add("inactive");
+  count.classList.add("inactive");
+  cart.classList.add("inactive");
   document.getElementById("cart-state").style.display = "block";
   document.getElementById("cart-state").style.textAlign = "center";
+
 }

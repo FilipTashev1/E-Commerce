@@ -40,11 +40,14 @@
       </div>
       <div class="nav-right">
         <button onclick="toggleCart()">
-          <img
-            src="./images/icon-cart.svg"
-            alt="shopping cart"
-            id="cart-icon"
-          />
+          <div>
+            <img
+             src="./images/icon-cart.svg"
+             alt="shopping cart"
+              id="cart-icon"
+            />
+            <a id="cart-item-ammount" class="inactive"></a>
+          </div>
         </button>
         <button>
           <img src="./images/image-avatar.png" alt="avatar" id="avatar" />
@@ -58,7 +61,7 @@
             <p id="cart-text">Cart</p>
           </div>
           <div id="cart-state">
-            <div id="item1" class="grid-col-span-1">
+            <div id="item1">
               <img
                 class="inactive"
                 src="./images/image-product-1-thumbnail.jpg"
@@ -82,7 +85,7 @@
                 alt="icon-delete"
               />
             </div>
-            <div id="item4" class="inactive grid-col-span-4">
+            <div id="item4" class="inactive">
               <button id="checkout-button">Checkout</button>
             </div>
             <p id="empty">Your cart is empty.</p>

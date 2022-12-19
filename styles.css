@@ -331,6 +331,10 @@ nav {
   background-color: white;
 }
 
+#cart-icon {
+  
+}
+
 #cart-text-border {
   border-bottom: solid 1px lightgray;
 }
@@ -356,14 +360,6 @@ nav {
   margin-top: 1.5rem;
 }
 
-.grid-col-span-1 {
-  grid-column: span 1;
-}
-
-.grid-col-span-4 {
-  grid-column: span 4;
-}
-
 #cart-image {
   max-height: 4rem;
   max-width: 4rem;
@@ -379,4 +375,22 @@ nav {
   color: black;
   font-weight: 700;
   margin-left: 0.5rem;
+}
+
+#plus,
+#minus {
+  background-color: hsl(223, 64%, 98%);
+}
+
+#cart-item-ammount {
+  position: absolute;
+  margin-left: -0.9rem;
+  margin-top: -0.4rem;
+  background-color: hsl(26, 100%, 55%);
+  color: #ffffff;
+  font: 700;
+  font-size: 0.75rem; 
+  border-radius: 30%;
+  height: 0.8rem;
+  width: 1.2rem;
 }
