@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -19,8 +18,10 @@
     />
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
+  <div id="gray" class="inactive"></div>
+  <div id="graytwo" class="inactive"></div>
   <body>
-    <div id="gray" class="inactive"></div>
+    
     <nav>
       <div class="nav-left">
         <button onclick="toggleMenu()">
@@ -51,17 +52,57 @@
         <button onclick="toggleCart()">
           <div class="cart-cont">
             <img
-             src="./images/icon-cart.svg"
-             alt="shopping cart"
+              src="./images/icon-cart.svg"
+              alt="shopping cart"
               id="cart-icon"
             />
             <a id="cart-item-ammount" class="inactive"></a>
           </div>
         </button>
-          <img src="./images/image-avatar.png" alt="avatar" id="avatar" />
+        <img src="./images/image-avatar.png" alt="avatar" id="avatar" />
       </div>
     </nav>
     <main>
+        <div id ="enlarged-imgs-wrapper" class="inactive">
+          <button id="X" onclick="closeEnlargedImg()"> <img src="./images/icon-close-white.svg" alt="close" id="close"/></button>
+          <div id="kek">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="sneakers"
+              id="enlarged-img"
+            />
+            <div class="test">
+              <button id="e-prev" onclick="prev()">
+                <img src="./images/icon-previous.svg" alt="previous" />
+              </button>
+              <button id="e-next" onclick="next()">
+                <img src="./images/icon-next.svg" alt="next" />
+              </button>
+            </div>
+          </div>
+          <div>
+            <img
+              id="e-thmb1"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="e-thmb2"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="e-thmb3"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="e-thmb4"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="sneakers"
+            />
+          </div>
+        </div>
       <div class="product">
         <div id="emptyCart" class="inactive">
           <div id="cart-text-border">
@@ -98,18 +139,41 @@
             <p id="empty">Your cart is empty.</p>
           </div>
         </div>
-        <button id="prev" onclick="prev()">
-          <img src="./images/icon-previous.svg" alt="previous" />
-        </button>
-        <img src="./images/image-product-1.jpg" alt="sneakers" id="sneakers" />
-        <button id="next" onclick="next()">
-          <img src="./images/icon-next.svg" alt="next" />
-        </button>
-        <div id="sneaker-thumbnail">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="sneakers" />
-          <img src="./images/image-product-2-thumbnail.jpg" alt="sneakers" />
-          <img src="./images/image-product-3-thumbnail.jpg" alt="sneakers" />
-          <img src="./images/image-product-4-thumbnail.jpg" alt="sneakers" />
+        <div class="image-container">
+          <button id="prev" onclick="prev()">
+            <img src="./images/icon-previous.svg" alt="previous" />
+          </button>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="sneakers"
+            id="sneakers"
+            onclick="enlargeImage()"
+          />
+          <button id="next" onclick="next()">
+            <img src="./images/icon-next.svg" alt="next" />
+          </button>
+          <div id="sneaker-thumbnail">
+            <img
+              id="thmb1"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="thmb2"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="thmb3"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="sneakers"
+            />
+            <img
+              id="thmb4"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="sneakers"
+            />
+          </div>
         </div>
         <div id="text-wrapper">
           <div class="text">
@@ -117,8 +181,8 @@
             <h2>Fall Limited Edition Sneakers</h2>
             <p>
               These low-profile sneakers are your perfect casual wear companion.
-              Featuring a durable rubber outer sole, they'll withstand everything
-              the weather can offer.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer.
             </p>
           </div>
           <div class="price-container">
@@ -127,7 +191,7 @@
             <a id="full-price">$250.00</a>
           </div>
           <div id="cart-wrapper">
-            <div class="add-to-cart">
+            <div id="add-remove-to-cart">
               <button id="minus" onclick="minus()">
                 <img src="./images/icon-minus.svg" alt="minus" />
               </button>
@@ -146,5 +210,6 @@
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

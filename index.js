@@ -1,26 +1,35 @@
 function next() {
   img = document.getElementById("sneakers");
-  if (img.src.match("./images/image-product-1.jpg")) {
+  if (img.src.match("./images/image-product-1.jpg") || img2.src.match("./images/image-product-1.jpg")) {
     img.src = "./images/image-product-2.jpg";
-  } else if (img.src.match("./images/image-product-2.jpg")) {
+    img2.src = "./images/image-product-2.jpg";
+  } else if (img.src.match("./images/image-product-2.jpg") || img2.src.match("./images/image-product-2.jpg")) {
     img.src = "./images/image-product-3.jpg";
-  } else if (img.src.match("./images/image-product-3.jpg")) {
+    img2.src = "./images/image-product-3.jpg";
+  } else if (img.src.match("./images/image-product-3.jpg") || img2.src.match("./images/image-product-3.jpg")) {
     img.src = "./images/image-product-4.jpg";
+    img2.src = "./images/image-product-4.jpg";
   } else {
     img.src = "./images/image-product-1.jpg";
+    img2.src = "./images/image-product-1.jpg";
   }
 }
 
 function prev() {
   img = document.getElementById("sneakers");
-  if (img.src.match("./images/image-product-4.jpg")) {
+  img2 = document.getElementById("enlarged-img");
+  if (img.src.match("./images/image-product-4.jpg") || img2.src.match("./images/image-product-4.jpg")) {
     img.src = "./images/image-product-3.jpg";
-  } else if (img.src.match("./images/image-product-3.jpg")) {
+    img2.src = "./images/image-product-3.jpg";
+  } else if (img.src.match("./images/image-product-3.jpg") || img2.src.match("./images/image-product-3.jpg")) {
     img.src = "./images/image-product-2.jpg";
-  } else if (img.src.match("./images/image-product-2.jpg")) {
+    img2.src = "./images/image-product-2.jpg";
+  } else if (img.src.match("./images/image-product-2.jpg") || img2.src.match("./images/image-product-2.jpg")) {
     img.src = "./images/image-product-1.jpg";
+    img2.src = "./images/image-product-1.jpg";
   } else {
     img.src = "./images/image-product-4.jpg";
+    img2.src = "./images/image-product-4.jpg";
   }
 }
 
@@ -94,8 +103,8 @@ function addToCart() {
     item3.classList.remove("inactive");
     item4.classList.remove("inactive");
     count.classList.remove("inactive");
-    prev.classList.add('inactive');
-    next.classList.add('inactive');
+    prev.classList.add("inactive");
+    next.classList.add("inactive");
     itemPrice.innerHTML = price.innerHTML;
     buyAmmount.innerHTML = ammount.innerHTML;
     total.innerHTML = "$" + ammount.innerHTML * price.innerHTML;
@@ -130,9 +139,24 @@ function emptyCart() {
   item4.classList.add("inactive");
   count.classList.add("inactive");
   cart.classList.add("inactive");
-  prev.classList.remove('inactive');
-  next.classList.remove('inactive');
+  prev.classList.remove("inactive");
+  next.classList.remove("inactive");
   document.getElementById("cart-state").style.display = "block";
   document.getElementById("cart-state").style.textAlign = "center";
+}
 
+function enlargeImage() {
+  gray = document.getElementById("graytwo");
+  imgWrapper = document.getElementById("enlarged-imgs-wrapper");
+  if(gray.classList.contains("inactive") && imgWrapper.classList.contains("inactive")) {
+    gray.classList.remove("inactive")
+    imgWrapper.style.display = "grid";
+  };
+}
+
+function closeEnlargedImg() { 
+  imgWrapper = document.getElementById("enlarged-imgs-wrapper");
+  gray = document.getElementById("graytwo");
+  imgWrapper.style.display = "none";
+  gray.classList.add("inactive")
 }
