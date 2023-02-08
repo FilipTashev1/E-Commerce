@@ -1,5 +1,6 @@
 function next() {
   img = document.getElementById("sneakers");
+  img2 = document.getElementById("enlarged-img");
   if (img.src.match("./images/image-product-1.jpg") || img2.src.match("./images/image-product-1.jpg")) {
     img.src = "./images/image-product-2.jpg";
     img2.src = "./images/image-product-2.jpg";
@@ -146,12 +147,15 @@ function emptyCart() {
 }
 
 function enlargeImage() {
-  gray = document.getElementById("graytwo");
-  imgWrapper = document.getElementById("enlarged-imgs-wrapper");
-  if(gray.classList.contains("inactive") && imgWrapper.classList.contains("inactive")) {
-    gray.classList.remove("inactive")
-    imgWrapper.style.display = "grid";
-  };
+  var width = window.innerWidth; 
+  if (width >= 769) {
+    gray = document.getElementById("graytwo");
+    imgWrapper = document.getElementById("enlarged-imgs-wrapper");
+    if(gray.classList.contains("inactive") && imgWrapper.classList.contains("inactive")) {
+      gray.classList.remove("inactive")
+      imgWrapper.style.display = "grid";
+    };
+  }
 }
 
 function closeEnlargedImg() { 
@@ -160,3 +164,40 @@ function closeEnlargedImg() {
   imgWrapper.style.display = "none";
   gray.classList.add("inactive")
 }
+
+function setImgOne() {
+  img = document.getElementById("sneakers");
+  img2 = document.getElementById("enlarged-img");
+  if (!img.src.match("./images/image-product-1.jpg") || !img2.src.match("./images/image-product-1.jpg")) {
+    img.src = "./images/image-product-1.jpg";
+    img2.src = "./images/image-product-1.jpg";
+  }
+}
+
+function setImgTwo() {
+  img = document.getElementById("sneakers");
+  img2 = document.getElementById("enlarged-img");
+  if (!img.src.match("./images/image-product-2.jpg") || !img2.src.match("./images/image-product-2.jpg")) {
+    img.src = "./images/image-product-2.jpg";
+    img2.src = "./images/image-product-2.jpg";
+  }
+}
+
+function setImgThree() {
+  img = document.getElementById("sneakers");
+  img2 = document.getElementById("enlarged-img");
+  if (!img.src.match("./images/image-product-3.jpg") || !img2.src.match("./images/image-product-3.jpg")) {
+    img.src = "./images/image-product-3.jpg";
+    img2.src = "./images/image-product-3.jpg";
+  }
+}
+
+function setImgFour() {
+  img = document.getElementById("sneakers");
+  img2 = document.getElementById("enlarged-img");
+  if (!img.src.match("./images/image-product-4.jpg") || !img2.src.match("./images/image-product-4.jpg")) {
+    img.src = "./images/image-product-4.jpg";
+    img2.src = "./images/image-product-4.jpg";
+  }
+}
+

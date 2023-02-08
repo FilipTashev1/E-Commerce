@@ -21,7 +21,6 @@
   <div id="gray" class="inactive"></div>
   <div id="graytwo" class="inactive"></div>
   <body>
-    
     <nav>
       <div class="nav-left">
         <button onclick="toggleMenu()">
@@ -42,11 +41,11 @@
         <img src="./images/logo.svg" alt="logo" id="logo" />
       </div>
       <div id="collections" class="inactive">
-        <a href="#collections">Collections</a>
-        <a href="#men">Men</a>
-        <a href="#women">Women</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="navlink" href="#collections">Collections</a>
+        <a class="navlink" href="#men">Men</a>
+        <a class="navlink" href="#women">Women</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#contact">Contact</a>
       </div>
       <div class="nav-right">
         <button onclick="toggleCart()">
@@ -63,46 +62,52 @@
       </div>
     </nav>
     <main>
-        <div id ="enlarged-imgs-wrapper" class="inactive">
-          <button id="X" onclick="closeEnlargedImg()"> <img src="./images/icon-close-white.svg" alt="close" id="close"/></button>
-          <div id="kek">
-            <img
-              src="./images/image-product-1.jpg"
-              alt="sneakers"
-              id="enlarged-img"
-            />
-            <div class="test">
-              <button id="e-prev" onclick="prev()">
-                <img src="./images/icon-previous.svg" alt="previous" />
-              </button>
-              <button id="e-next" onclick="next()">
-                <img src="./images/icon-next.svg" alt="next" />
-              </button>
-            </div>
-          </div>
-          <div>
-            <img
-              id="e-thmb1"
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="sneakers"
-            />
-            <img
-              id="e-thmb2"
-              src="./images/image-product-2-thumbnail.jpg"
-              alt="sneakers"
-            />
-            <img
-              id="e-thmb3"
-              src="./images/image-product-3-thumbnail.jpg"
-              alt="sneakers"
-            />
-            <img
-              id="e-thmb4"
-              src="./images/image-product-4-thumbnail.jpg"
-              alt="sneakers"
-            />
+      <div id="enlarged-imgs-wrapper" class="inactive">
+        <button id="X" onclick="closeEnlargedImg()">
+          <img src="./images/icon-close-white.svg" alt="close" id="close" />
+        </button>
+        <div id="kek">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="sneakers"
+            id="enlarged-img"
+          />
+          <div class="test">
+            <button id="e-prev" onclick="prev()">
+              <img src="./images/icon-previous.svg" alt="previous" />
+            </button>
+            <button id="e-next" onclick="next()">
+              <img src="./images/icon-next.svg" alt="next" />
+            </button>
           </div>
         </div>
+        <div>
+          <img
+            id="e-thmb1"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="sneakers"
+            onclick="setImgOne()"
+          />
+          <img
+            id="e-thmb2"
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="sneakers"
+            onclick="setImgTwo()"
+          />
+          <img
+            id="e-thmb3"
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="sneakers"
+            onclick="setImgThree()"
+          />
+          <img
+            id="e-thmb4"
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="sneakers"
+            onclick="setImgFour()"
+          />
+        </div>
+      </div>
       <div class="product">
         <div id="emptyCart" class="inactive">
           <div id="cart-text-border">
@@ -157,21 +162,25 @@
               id="thmb1"
               src="./images/image-product-1-thumbnail.jpg"
               alt="sneakers"
+              onclick="setImgOne()"
             />
             <img
               id="thmb2"
               src="./images/image-product-2-thumbnail.jpg"
               alt="sneakers"
+              onclick="setImgTwo()"
             />
             <img
               id="thmb3"
               src="./images/image-product-3-thumbnail.jpg"
               alt="sneakers"
+              onclick="setImgThree()"
             />
             <img
               id="thmb4"
               src="./images/image-product-4-thumbnail.jpg"
               alt="sneakers"
+              onclick="setImgFour()"
             />
           </div>
         </div>
